@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+    --card-background: #f3f2f2;
+    --gray: #A1A1A1;
+    --gray-light: #f9f9f9;
+    --gray-dark: #686868;
+    --white: #ffffff;
+    --red-light: hwb(12 33% 13%);
+    --green: #3A8C8C;
+    --black: rgb(58, 58, 58);
+    --dscto: #030303;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: var(--gray);
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--gray);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-dark);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-dark);
+}
+
+h2 {
+    padding: 10% 0;
+    color: var(--red-light);
+    font-weight: 500;
+    text-align: center;
+}
+
+body {
+    overflow-y: scroll;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    margin: 0 5% 0 5%;
+}
+
+header .title {
+    display: flex;
+    padding: 6% 0 5% 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .title h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+header .title .search {
+    width: 62%;
+}
+
+header .title .search input {
+    width: 100%;
+    padding: 3%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 0.6rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 4px var(--gray);
+}
+
+header .title .cart-icon {
+    width: 10%;
+    display: flex;
+}
+
+header .title .cart-icon img {
+    width: 95%;
+}
+
+header .navbar {
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .navbar a {
+    padding: 0 2%;
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 300;
+}
+
+.problem {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.problem figure,
+.product figure {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.problem figure {
+    position: absolute;
+    z-index: -1;
+}
+
+.problem figure img {
+    width: 0;
+}
+
+.product figure img {
+    width: 100%;
+}
+
+.problem div,
+.product div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.problem div p,
+.product div p,
+.cta .cta-texto p {
+    font-weight: 300;
+    text-align: justify;
+    font-size: 0.9rem;
+    padding: 5% 0;
+}
+
+
+.social-validation {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+}
+
+.social-validation .social-validation-title {
+    margin: 8% 0;
+    text-align: center;
+}
+
+.social-validation .social-validation-title .subtitle {
+    font-size: 0.8rem;
+    color: var(--gray-dark);
+    font-weight: 300;
+}
+
+.social-validation .references {
+    margin: 3% 0 8% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-validation .references .card {
+    width: 80%;
+}
+
+.social-validation .references .card figure {
+    width: 100%;
+}
+
+.social-validation .references .card figure img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    clip-path: circle(at 50% 50%)
+}
+
+.social-validation .references .card .card-text p {
+    font-weight: 300;
+    text-align: justify;
+    font-size: 0.9rem;
+    padding: 5% 0;
+}
+
+/* Estilos del formulario */
+
+
+footer {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) {
+    header .title {
+        padding: 4% 0 2% 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .title h1 {
+        width: 25%;
+        font-size: 2.7rem;
+        font-weight: 400;
+    }
+
+    header .title .search {
+        width: 50%;
+    }
+
+    header .title .search input {
+        width: 100%;
+        padding: 2.5%;
+        border-radius: 0.6rem;
+    }
+
+    header .title .cart-icon {
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header .title .cart-icon img {
+        width: 22%;
+    }
+
+    header .navbar {
+        justify-content: flex-start;
+    }
+
+    header .navbar a {
+        padding: 0 4% 0 0;
+    }
+
+    .problem,
+    .product {
+        flex-direction: row;
+    }
+
+    .problem .info {
+        margin-left: -4rem;
+    }
+
+    .problem figure {
+        width: 85%;
+    }
+
+    .problem figure img {
+        width: 100%;
+        z-index: -1;
+    }
+
+    .product figure {
+        width: 50%;
+    }
+
+    .product figure img {
+        width: 80%;
+    }
+
+    .problem {
+        padding: 10% 5%;
+    }
+
+    .problem div,
+    .product div {
+        width: 50%;
+        padding: 1% 4%;
+    }
+
+    .problem div {
+        background-color: var(--gray-light);
+    }
+
+    .social-validation .social-validation-title {
+        margin: 3% 0;
+    }
+
+    .social-validation .references {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .social-validation .references .card {
+        width: 25%;
+    }
+
+    .social-validation .references .card figure {
+        width: 100%;
+    }
+
+    .social-validation .references .card figure img {
+        width: 100%;
+    }
+
+
+    footer {
+        height: 7vh;
+    }
+
+}
+
+/* Media query for larger screens (monitors) */
+@media (min-width: 1024px) {
+    header .title {
+        padding: 3% 0 1% 0;
+        align-items: center;
+    }
+
+    header .title h1 {
+        width: 25%;
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+
+    header .title .search {
+        width: 50%;
+    }
+
+    header .title .search input {
+        width: 100%;
+        padding: 2%;
+    }
+
+    header .title .cart-icon {
+        height: 100%;
+    }
+
+    header .title .cart-icon img {
+        max-width: 2.5rem;
+    }
+
+    .problem .info {
+        width: 45%;
+        margin-left: 0;
+    }
+
+    .problem figure {
+        max-width: 70%;
+        margin-left: 15.8rem;
+    }
+
+}

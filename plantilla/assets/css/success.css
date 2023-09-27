@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+    --card-background: #f3f2f2;
+    --gray: #A1A1A1;
+    --gray-light: #f9f9f9;
+    --gray-dark: #686868;
+    --white: #ffffff;
+    --red-light: hwb(12 33% 13%);
+    --green: #3A8C8C;
+    --black: rgb(58, 58, 58);
+    --dscto: #030303;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: var(--gray);
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--gray);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-dark);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-dark);
+}
+

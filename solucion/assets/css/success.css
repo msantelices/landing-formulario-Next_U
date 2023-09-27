@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+    --card-background: #f3f2f2;
+    --gray: #A1A1A1;
+    --gray-light: #f9f9f9;
+    --gray-dark: #686868;
+    --white: #ffffff;
+    --red-light: hwb(12 33% 13%);
+    --green: #3A8C8C;
+    --black: rgb(58, 58, 58);
+    --dscto: #030303;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: var(--gray);
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--gray);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-dark);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-dark);
+}
+
+h2 {
+    padding: 10% 0;
+    color: var(--red-light);
+    font-weight: 500;
+    text-align: center;
+}
+
+body {
+    overflow-y: scroll;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+header {
+    margin: 0 5% 0 5%;
+}
+
+header .title {
+    display: flex;
+    padding: 6% 0 5% 0;
+    align-items: center;
+    justify-content: center;
+}
+
+header .title h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.success {
+    min-height: calc(100vh - 109.27px);
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.success .success-texto {
+    background-color: var(--gray-light);
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.success .success-texto p {
+    text-align: center;
+}
+
+
+.success-texto .btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 4%;
+    font-size: 0.9rem;
+    border: 0.1rem;
+    border-radius: 0.8rem;
+    margin: 5%;
+    font-family: 'Poppins';
+    background-color: var(--red-light);
+    color: var(--white);
+    box-shadow: 0 2px 4px var(--gray);
+    cursor: pointer;
+}
+
+footer {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) {
+    header .title {
+        padding: 4% 0 2% 0;
+    }
+
+    header .title h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+
+    .success {
+        min-height: calc(100vh - 144.50px);
+        width: 100%;
+        margin: 0;
+        padding: 3% 0;
+        flex-direction: row;
+        background-image: url(/assets/spacejoy.jpg);
+        background-size: cover;
+        position: relative;
+    }
+
+    .success::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(232, 88, 53, 0.71);
+    }
+
+    .success .success-texto {
+        width: 50%;
+        padding: 1% 4%;
+        z-index: 2;
+    }
+
+    footer {
+        height: 7vh;
+    }
+
+}
+
+/* Media query for larger screens (monitors) */
+@media (min-width: 1024px) {
+    header .title {
+        padding: 3% 0 1% 0;
+        align-items: center;
+    }
+
+    header .title h1 {
+
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+
+
+}
